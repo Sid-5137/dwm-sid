@@ -1,27 +1,106 @@
 <div align="center">
   <img src="./dwm-logo-bordered.png" alt="dwm-logo-bordered" width="195" height="90"/>
 
-  # dwm - dynamic window manager
-  ### dwm is an extremely ***fast***, ***small***, and ***dynamic*** window manager for X.
-
+  # dwm – Sid’s build
+  ### A fast, minimal, ML-friendly window manager for X11
 </div>
 
 ---
-This is my **HEAVILY MODIFIED** version of dwm. It is based on the original [suckless.org](https://dwm.suckless.org/) dwm window manager but includes a number of patches and customizations to make it more user friendly and functional out of the box.
 
-## 📋 Install
-This guide assumes your system has the latest updates before going ahead with the installation on a Arch Linux based system.
+This repository contains **my personal, modified build of dwm**, originally from  
+[suckless.org](https://dwm.suckless.org/).
 
-1. Launch Linutil Project with the command:
-    ```bash
-    curl -fsSL https://christitus.com/linux | sh
-    ```
-<img width="1839" height="1000" alt="image" src="https://github.com/user-attachments/assets/314f9a40-4ccb-4c34-b3d2-dcfee63c278b" />
+The base for this build is taken from:
 
-2. Enable Multi-Selection with key `v` and select `dwm`, `rofi`, `bash prompt`, and `ghostty` from the list.
-  _Note: You can also select other packages as per your requirement._
-3. Press `Enter` to start the installation. Follow the on-screen instructions to complete the installation.
+https://github.com/ChrisTitusTech/dwm-titus
 
-> [!TIP]
-> - By default new terminals are opened by using the keyboard shortcut of <kbd>SUPER</kbd> + <kbd>X</kbd> while rofi is started using <kbd>SUPER</kbd>+<kbd>R</kbd>
-> - Check `config.h` for the keybindings, and change them according to your preference.
+That repository was cloned and then **customized and extended** to suit my own
+workflow, with additional rules, patches, and configuration changes.
+
+---
+
+## ✨ Features
+
+- Minimal but usable defaults
+- Terminal-centric workflow (kitty / ghostty friendly)
+- Rofi integration
+- Floating rules for dialogs and utilities
+- Patch selection focused on stability
+- Tuned for development and ML workflows
+
+---
+
+## 📋 Installation
+
+> **Target system:** Arch Linux / Arch-based distributions  
+> (CachyOS, EndeavourOS, etc.)
+
+Make sure your system is fully up to date before proceeding.
+
+### 1. Launch Linutil
+
+```bash
+curl -fsSL https://christitus.com/linux | sh
+````
+
+### 2. Select packages
+
+Enable multi-selection by pressing `v` and select:
+
+> `rofi` and the `bash prompt` are installed and configured directly by Linutil
+> via the `https://christitus.com/linux | sh` script.
+
+### 3. Complete installation
+
+Press `Enter` and follow the on-screen instructions.
+
+Linutil will install the selected packages.
+The `dwm` installed is based on **ChrisTitusTech/dwm-titus**, which this repository
+modifies further for a personalized setup.
+
+---
+
+## 🧠 Philosophy
+
+This build follows a simple rule:
+
+> The window manager should never be the bottleneck.
+
+* No runtime configuration files
+* No background daemons
+* No unnecessary abstractions
+
+Everything is explicit, reproducible, and debuggable.
+
+---
+
+## 🛠 Customization
+
+All configuration is done at compile time via `config.h`.
+
+After making changes:
+
+```bash
+sudo make clean install
+```
+
+Restart dwm for changes to take effect.
+
+---
+
+## 🙏 Credits
+
+* **suckless.org** — original `dwm`
+* **Chris Titus Tech** — [https://github.com/ChrisTitusTech/dwm-titus](https://github.com/ChrisTitusTech/dwm-titus)
+  Used as the base dwm build and modified further for this repository.
+
+---
+
+## 📜 License
+
+MIT / suckless license
+Use it, fork it, break it, improve it.
+
+```
+
+---
