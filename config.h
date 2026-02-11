@@ -52,19 +52,19 @@ static const char etagf[] = "[%s]";     /* format of an empty tag */
 static const int lcaselbl = 0;          /* 1 means make tag label lowercase */
 
 static const Rule rules[] = {
-    /* class           instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
-    { "kitty",         NULL,     NULL,           1 << 0,    0,          1,          0,         -1 },
-    { "Code",          NULL,     NULL,           1 << 2,    0,          0,          0,         -1 },
-    { "Brave-browser", NULL,     NULL,           1 << 1,    0,          0,          0,         -1 },
-    { "thunar",        NULL,     NULL,           1 << 4,    0,          0,          0,         -1 },
-    { NULL,            NULL,     "Event Tester", 0,         0,          0,          1,         -1 },
-    { NULL,            NULL,     "Preferences",  0,         1,          0,          1,         -1 },
-    { NULL,            NULL,     "Settings",     0,         1,          0,          1,         -1 },
-    { NULL,            NULL,     "File Upload",  0,         1,          0,          1,         -1 },
-    { NULL,            NULL,     "Open File",    0,         1,          0,          1,         -1 },
-    { NULL,            NULL,     "Save As",      0,         1,          0,          1,         -1 },
-    { "gpu-monitor",   NULL,     "nvidia-smi",   0,         1,          0,          1,         -1 },
-    { "nvtop-monitor", NULL,     "nvtop",        0,         1,          0,          1,         -1 },
+    /* class           instance  		title           tags mask  isfloating  isterminal  noswallow  monitor */
+    { "kitty",         "kitty",    		NULL,           0,		   0,          1,          0,         -1 },
+    { "kitty-float",   NULL,			"FLOAT_KITTY",	0,		   1,		   1,		   0,		  -1 },
+    { "Code",          NULL,     		NULL,           1 << 1,    0,          0,          0,         -1 },
+    { "Brave-browser", NULL,     		NULL,           1 << 0,    0,          0,          0,         -1 },
+    { NULL,            NULL,     		"Event Tester", 0,         0,          0,          1,         -1 },
+    { NULL,            NULL,     		"Preferences",  0,         1,          0,          1,         -1 },
+    { NULL,            NULL,     		"Settings",     0,         1,          0,          1,         -1 },
+    { NULL,            NULL,     		"File Upload",  0,         1,          0,          1,         -1 },
+    { NULL,            NULL,     		"Open File",    0,         1,          0,          1,         -1 },
+    { NULL,            NULL,     		"Save As",      0,         1,          0,          1,         -1 },
+    { "gpu-monitor",   NULL,     		"nvidia-smi",   0,         1,          0,          1,         -1 },
+    { "nvtop-monitor", NULL,     		"nvtop",        0,         1,          0,          1,         -1 },
 };
 
 /* layout(s) */
@@ -100,6 +100,7 @@ static const char *youtubecmd[]   = { "webapp-launch", "https://youtube.com", NU
 static const char *chatgptcmd[]   = { "webapp-launch", "https://chatgpt.com", NULL };
 static const char *whatsappcmd[]  = { "webapp-launch", "https://web.whatsapp.com/", NULL };
 static const char *gpu[] 		  = { "gpu-monitor", NULL };
+static const char *kittyfloatcmd[] = {"kitty-float", NULL};
 
 static Key keys[] = {
     /* modifier                     key                        function        argument */
@@ -109,6 +110,8 @@ static Key keys[] = {
     { MODKEY,                       XK_a,                      spawn,          {.v = chatgptcmd } },
     { MODKEY,		                XK_g,                      spawn,          {.v = gpu } },
     { MODKEY,		                XK_w,                      spawn,          {.v = whatsappcmd } },
+	{ MODKEY,						XK_t,					   spawn,		   {.v = kittyfloatcmd } },
+/*	{ MODKEY,						XK_t,					   spawn,		   SHCMD ("kitty-float")},*/
 /*    { MODKEY,                       XK_w,                      spawn,          SHCMD ("looking-glass-client -F")},*/
     { MODKEY,                       XK_b,                      spawn,          SHCMD ("xdg-open https://")},
     { MODKEY,                       XK_p,                      spawn,          SHCMD ("flameshot full -p $HOME/Pictures/Screenshots/")},

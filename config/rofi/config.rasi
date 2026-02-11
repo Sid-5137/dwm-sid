@@ -2,9 +2,19 @@
 
 configuration {
   show-icons: true;
-  icon-theme: "Papirus";
+  icon-theme: "MacTahoe-nord-dark";
   display-drun: "  ";
   display-window: "﩯 ";
   display-combi: "  ";
 }
-@theme "themes/sidetab-nord.rasi"
+//@theme "themes/sidetab-nord.rasi"
+
+//@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
+
+//@theme "/home/sid/.config/rofi/themes/nord.rasi"
+
+//@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
+
+//@theme "/home/sid/.config/rofi/themes/rounded_nord.rasi"
+
+@theme "/home/sid/.config/rofi/themes/nord.rasi"
