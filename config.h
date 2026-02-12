@@ -20,7 +20,7 @@ static const char *altbarcmd                   = "$HOME/.config/polybar/launch.s
 #define ICONSIZE                              17     /* icon size */
 #define ICONSPACING                           5      /* space between icon and title */
 #define SHOWWINICON                           1      /* 0 means no winicon */
-static const char *fonts[]                    = { "JetBrainsMono Nerd Font Mono:size=11:antialias=true:autohint=true:hintstyle=hintfull", "NotoColorEmoji:pixelsize=16:antialias=true:autohint=true" };
+static const char *fonts[]                    = { "JetBrainsMono Nerd Font Mono:size=11:antialias=true:autohint=true:hintstyle=hintfull", "NotoColorEmoji:pixelsize=14:antialias=true:autohint=true" };
 static const char normbordercolor[] = "#3B4252";
 static const char normbgcolor[]     = "#2E3440";
 static const char normfgcolor[]     = "#D8DEE9";
