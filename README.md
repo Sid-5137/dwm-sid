@@ -19,74 +19,10 @@ workflow, with additional rules, patches, and configuration changes.
 
 ---
 
-## ✨ Features
-
-- Minimal but usable defaults
-- Terminal-centric workflow (kitty / ghostty friendly)
-- Rofi integration
-- Floating rules for dialogs and utilities
-- Patch selection focused on stability
-- Tuned for development and ML workflows
-
----
-
 ## 📋 Installation
 
 > **Target system:** Arch Linux / Arch-based distributions  
 > (CachyOS, EndeavourOS, etc.)
-
-Make sure your system is fully up to date before proceeding.
-
-### 1. Launch Linutil
-
-```bash
-curl -fsSL https://christitus.com/linux | sh
-````
-
-### 2. Select packages
-
-Enable multi-selection by pressing `v` and select:
-
-> `rofi` and the `bash prompt` are installed and configured directly by Linutil
-> via the `https://christitus.com/linux | sh` script.
-
-### 3. Complete installation
-
-Press `Enter` and follow the on-screen instructions.
-
-Linutil will install the selected packages.
-The `dwm` installed is based on **ChrisTitusTech/dwm-titus**, which this repository
-modifies further for a personalized setup.
-
----
-
-## 🧠 Philosophy
-
-This build follows a simple rule:
-
-> The window manager should never be the bottleneck.
-
-* No runtime configuration files
-* No background daemons
-* No unnecessary abstractions
-
-Everything is explicit, reproducible, and debuggable.
-
----
-
-## 🛠 Customization
-
-All configuration is done at compile time via `config.h`.
-
-After making changes:
-
-```bash
-sudo make clean install
-```
-
-Restart dwm for changes to take effect.
-
----
 
 ## 🙏 Credits
 
